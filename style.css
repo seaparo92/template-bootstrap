@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('SpecCon Academy Background Image.png');
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn {
+    background-color: #12265E;
+    color: white;
+    border: none;
+    padding: 12px 100px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.login-btn:hover {
+    background-color: #FF9C2A;
+}
+
+.forgot-password {
+    color: blue;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #FF9C2A;
+    overflow: hidden;
+    position: absolute;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #12265E;
+}
+
+.menu-left {
+    left: 70%;
+    top: 10%;
+    transform: translateY(-70%);
+}
+
+@media screen and (max-width: 600px) {
+    .menu-left {
+        position: static;
+    }
+    
+    ul.menu-left li {
+        display: none;
+    }
+
+    ul.menu-left.responsive {
+        position: relative;
+    }
+
+    ul.menu-left.responsive li {
+        display: block;
+        float: none;
+    }
+}

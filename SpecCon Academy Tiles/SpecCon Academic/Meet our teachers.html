@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Teachers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('SpecCon Academy Background Image.png');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Align items in a column */
+            background-size: cover; /* Make sure the background covers the entire viewport */
+        }
+
+        .teachers-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px; /* Adjust based on your preference */
+            flex-wrap: wrap; /* Allow the teachers to wrap on smaller screens */
+        }
+
+        .teacher-container {
+            background-color: white;
+            color: #12265e;
+            padding: 1rem; /* Use relative units for padding */
+            border-radius: 10px;
+            margin: 10px;
+            flex: 0 1 calc(33.333% - 20px); /* Adjust to take up a third of the row minus margin */
+            text-align: center;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 1rem; /* Use rem for margin */
+            font-size: 3rem; /* Adjust font size */
+            width: 100%;
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            max-width: 180px; /* Limit the size */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .teacher-container {
+                flex: 0 1 calc(50% - 20px); /* Each takes half of the row on smaller screens */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .teacher-container {
+                flex: 0 1 calc(100% - 20px); /* Each takes full width on very small screens */
+                padding: 0.5rem; /* Reduce padding on smaller screens */
+            }
+            h2 {
+                font-size: 1.8rem; /* Adjust heading size for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Meet Our Teachers</h2>
+    <div class="teachers-row">
+        <div class="teacher-container">
+            <img src="Teacher1.jpg" alt="Teacher 1">
+            <h3>Teacher Name 1</h3>
+            <p>Subject: English</p>
+            <p>Experience: 10 years</p>
+        </div>
+        <div class="teacher-container">
+            <img src="Teacher2.jpg" alt="Teacher 2">
+            <h3>Teacher Name 2</h3>
+            <p>Subject: Mathematics</p>
+            <p>Experience: 8 years</p>
+        </div>
+        <div class="teacher-container">
+            <img src="Teacher3.jpg" alt="Teacher 3">
+            <h3>Teacher Name 3</h3>
+            <p>Subject: Science</p>
+            <p>Experience: 12 years</p>
+        </div>
+    </div>
+    <div class="teachers-row">
+        <div class="teacher-container">
+            <img src="Teacher4.jpg" alt="Teacher 4">
+            <h3>Teacher Name 4</h3>
+            <p>Subject: History</p>
+            <p>Experience: 7 years</p>
+        </div>
+        <div class="teacher-container">
+            <img src="Teacher5.jpg" alt="Teacher 5">
+            <h3>Teacher Name 5</h3>
+            <p>Subject: Geography</p>
+            <p>Experience: 9 years</p>
+        </div>
+        <div class="teacher-container">
+            <img src="Teacher6.jpg" alt="Teacher 6">
+            <h3>Teacher Name 6</h3>
+            <p>Subject: Arts</p>
+            <p>Experience: 6 years</p>
+        </div>
+    </div>
+</body>
+</html>

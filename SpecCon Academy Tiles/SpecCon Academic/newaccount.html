@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Term</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('SpecCon Academy Background Image.png');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Gap between grid items */
+        }
+
+        .term-container {
+            padding: 20px;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+            font-weight: bold;
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: transform 0.5s; /* Add transition for transform property */
+            perspective: 1000px; /* Perspective for 3D effect */
+            position: relative; /* Position for absolute child */
+        }
+
+        .term-container:hover {
+            transform: rotateY(180deg); /* Rotate container on hover */
+        }
+
+        .term-container:nth-child(odd) {
+            background-image: url('Term1.png'); 
+            color: #12265e;
+        }
+
+        .term-container:nth-child(even) {
+            background-image: url('Term2.png'); 
+            color: #ffffff; /* Change text color to white */
+        }
+
+        .term-container:nth-child(3) {
+            background-image: url('Term3.png');
+            color: #ffffff;
+        }
+
+        .term-container:nth-child(4) {
+            background-color: #e67e22;
+            color: #12265E;
+        }
+
+        h2 {
+            color: #12265E;
+            grid-column: 1 / -1; /* Span across all columns */
+        }
+
+        .term-back {
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Choose Your Term</h2>
+        <div class="term-container">
+            Term 1
+            <div class="term-back">
+                English
+            </div>
+        </div>
+        <a href="next_page_url2" class="term-container">
+            Term 6
+        </a>
+        <a href="next_page_url2" class="term-container">
+            Term 2
+        </a>
+        <a href="next_page_url3" class="term-container">
+            Term 3
+        </a>
+        <a href="next_page_url4" class="term-container">
+            Term 4
+        </a>
+    </div>
+</body>
+</html>

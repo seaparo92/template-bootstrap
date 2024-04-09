@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' rel='stylesheet' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('SpecCon Academy Background Image.png');
+            background-size: cover; /* Adjusted background size */
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 80px; /* Adjusted padding */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Adjusted to space between */
+            align-items: flex-start;
+        }
+
+        .container {
+            background-color: white;
+            color: #12265e;
+            padding: 20px; /* Adjusted padding */
+            border-radius: 15px;
+            margin: 10px 10px 10px 0; /* Adjusted margin */
+            flex: 1 1 calc(25% - 20px); /* Decreased container width */
+            max-width: calc(25% - 20px); /* Decreased max-width */
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .container img {
+            width: 150px; /* Increased image width */
+            border-radius: 60%;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #calendar {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container-group {
+            flex: 1 1 calc(75% - 20px); /* Adjusted width */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align containers to the left */
+            align-items: flex-start;
+        }
+
+        /* Adjusted height for specific containers */
+        .fixed-height-container {
+            height: 120px; /* Adjust height as needed */
+        }
+
+        .todo-container {
+            flex: 1 1 80%;
+            max-width: 36.5%;
+            max-height: 80%;
+        }
+
+        /* Adjusted width for specific containers */
+        .small-container {
+            flex: 1 1 35%; /* Set width to 20% */
+            max-width: 36%; /* Set max-width to 20% */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .container {
+                flex: 1 1 calc(100% - 20px);
+                max-width: calc(100% - 20px);
+            }
+            .container-group {
+                flex: 1 1 calc(100% - 20px); /* Adjusted width */
+            }
+        }
+
+        .todo-container ul {
+            text-align: left;
+        }
+
+        /* Set background images for modules */
+        .module-bg {
+    background-size: 100% 50%; /* Cover the bottom half */
+    background-repeat: no-repeat;
+    background-position: bottom; /* Align to the bottom */
+        }
+
+        .module-1 {
+            background-image: url('SpecCon Academy Tiles/Module 1.png');
+        }
+
+        .module-2 {
+            background-image: url('SpecCon Academy Tiles/Module 2.png');
+        }
+
+        .module-3 {
+            background-image: url('SpecCon Academy Tiles/Module 3.png');
+        }
+
+        .module-4 {
+            background-image: url('SpecCon Academy Tiles/Module 4.png');
+        }
+
+        .module-5 {
+            background-image: url('SpecCon Academy Tiles/Module 5.png');
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="SpecCon Academy Sidebar Tiles/profile.png" alt="Profile Picture">
+    <h3>Account</h3>
+    <img src="SpecCon Academy Sidebar Tiles/books.png" alt="Profile Picture">
+    <h3>Subjects</h3>
+    <div id="calendar"></div> <!-- Placeholder for the FullCalendar -->
+    <img src="SpecCon Academy Sidebar Tiles/messages.png" alt="Profile Picture">
+    <h3>Messages</h3>
+    <img src="SpecCon Academy Sidebar Tiles/staff.png" alt="Profile Picture">
+    <h3>Staff Room</h3>
+</div>
+<div class="container-group"> <!-- Group container starts here -->
+    <div class="container">
+        <h3>Term 1</h3>
+    </div>
+    <div class="container">
+        <h3>Natural Science</h3>
+    </div>
+    <div class="container">
+        <h3>Grade 5</h3>
+    </div>
+
+    <div class="container small-container"> <!-- Adjusted width -->
+        <h3>Success Toolkit</h3>
+    </div>
+    <div class="container small-container"> <!-- Adjusted width -->
+        <h3>Term 1 Task Schedule</h3>
+    </div>
+
+    <div class="container small-container module-bg module-1"> <!-- Adjusted width -->
+        <h3>Module 1</h3>
+        <p>Plants and Animals on Earth</p>
+    </div>
+    <div class="container small-container module-bg module-2"> <!-- Adjusted width -->
+        <h3>Module 2</h3>
+        <p>Animal Skeletons</p>
+    </div>
+    <div class="container small-container module-bg module-3"> <!-- Adjusted width -->
+        <h3>Module 3</h3>
+        <p>Skeletons as Structures</p>
+    </div>
+    <div class="container small-container module-bg module-4">
+        <h3>Module 4</h3>
+        <p>Food Chains</p>
+    </div>
+    <div class="container small-container module-bg module-5">
+        <h3>Module 5</h3>
+        <p>Life Cycles</p>
+    </div>
+		
+		<div class="container todo-container"> 
+            <h3>To Do List</h3>
+             <ul> 
+        <li>Grade 5</li>
+        <li>Natural Science</li>
+        <li>SBA TASK 001</li>
+        <li>Grade 5</li>
+        <li>Natural Science</li>
+        <li>SBA TASK 001</li>
+        <li>Grade 5</li>
+        <li>Natural Science</li>
+        <li>SBA TASK 001</li>
+        <!-- Add more items as needed -->
+    </ul>
+</div>
+        </div>
+    </div> <!-- Group container ends here -->
+	
+    <script>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                // Customize your calendar options here
+                defaultView: 'month',
+                events: [
+                    // Your event data
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

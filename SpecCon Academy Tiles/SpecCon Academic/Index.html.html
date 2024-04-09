@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('SpecCon Academy Background Image.png');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-btn {
+            background-color: #12265E;
+            color: white;
+            border: none;
+            padding: 12px 100px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .login-btn:hover {
+            background-color: #FF9C2A;
+        }
+
+        .forgot-password {
+            color: blue;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 250px;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #FF9C2A;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #12265E;
+        }
+
+        .menu-left {
+            left: 70%;
+            top: 10%;
+            transform: translateY(-70%);
+        }
+		
+        @media screen and (max-width: 600px) {
+            .menu-left {
+                position: static;
+            }
+            
+            ul.menu-left li {
+                display: none;
+            }
+
+            ul.menu-left.responsive {
+                position: relative;
+            }
+
+            ul.menu-left.responsive li {
+                display: block;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Specconacademylogo.png">
+        <form id="loginForm" action="#" method="POST" onsubmit="return validateForm()">
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <button type="submit" class="login-btn">LOG IN</button>
+        </form>
+        <a href="forgot-password.php" class="forgot-password">Forgot Password?</a>
+    </div>
+    <!-- Menu bar -->
+    <ul class="menu-left" id="myMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#Enrol">Enrol</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li style="float:right"><a href="javakscript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+    </ul>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "" || password == "") {
+                alert("Username and password are required");
+                return false;
+            }
+            
+            // Here you can add your validation logic using Google Sheets data
+            // For demonstration purposes, assuming a simple validation
+            
+            // If validation succeeds, redirect to the specified page
+            location.href = "Welcomespecconinte.html";
+            
+            // Prevent form submission (since we're handling the submission in JavaScript)
+            return false;
+        }
+    </script>
+</body>
+</html>

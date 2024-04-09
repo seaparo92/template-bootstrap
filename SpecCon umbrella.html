@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpecCon Holdings</title>
+    <style>
+        /* Carousel container styles */
+        .carousel {
+            width: 80%;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        /* Individual carousel items */
+        .carousel-item {
+            display: none;
+        }
+
+        /* Description styles */
+        .description {
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        /* Button styles */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: #12265E;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #FF9C2A;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>SpecCon Holdings</h1>
+    <div class="carousel">
+        <!-- Carousel items -->
+        <div class="carousel-item">
+            <h2>Andebe.co.za</h2>
+            <p class="description">Description of Andebe.co.za goes here.</p>
+        </div>
+        <div class="carousel-item">
+            <h2>megrolowveld.com</h2>
+            <p class="description">Description of megrolowveld.com goes here.</p>
+        </div>
+        <div class="carousel-item">
+            <h2>infinitylearn.co.za</h2>
+            <p class="description">Description of infinitylearn.co.za goes here.</p>
+        </div>
+        <div class="carousel-item">
+            <h2>TAP.co.za</h2>
+            <p class="description">Description of TAP.co.za goes here.</p>
+        </div>
+        <div class="carousel-item">
+            <h2>elearning.co.za</h2>
+            <p class="description">Description of elearning.co.za goes here.</p>
+        </div>
+        <div class="carousel-item">
+            <h2>InfinityNPO.org</h2>
+            <p class="description">Description of InfinityNPO.org goes here.</p>
+        </div>
+        
+        <!-- Previous and Next buttons -->
+        <button class="prev" onclick="prevSlide()">Previous</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("carousel-item");
+
+        // Function to show next slide
+        function nextSlide() {
+            slides[slideIndex].style.display = "none";
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].style.display = "block";
+        }
+
+        // Function to show previous slide
+        function prevSlide() {
+            slides[slideIndex].style.display = "none";
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            slides[slideIndex].style.display = "block";
+        }
+
+        // Show the first slide initially
+        slides[slideIndex].style.display = "block";
+    </script>
+</body>
+</html>

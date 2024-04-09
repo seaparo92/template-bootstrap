@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Subject</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('SpecCon Academy Background Image.png');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Align items in a column */
+            background-size: cover; /* Make sure the background covers the entire viewport */
+        }
+
+        .subjects-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px; /* Adjust based on your preference */
+            flex-wrap: wrap; /* Allow the subjects to wrap on smaller screens */
+        }
+
+        .subject-container {
+            background-color: white;
+            color: #12265e;
+            padding: 1rem; /* Use relative units for padding */
+            border-radius: 10px;
+            margin: 10px;
+            flex: 0 1 calc(33.333% - 20px); /* Adjust to take up a third of the row minus margin */
+            text-align: center;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 1rem; /* Use rem for margin */
+            font-size: 3rem; /* Adjust font size */
+            width: 100%;
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            max-width: 180px; /* Limit the size */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .subject-container {
+                flex: 0 1 calc(50% - 20px); /* Each takes half of the row on smaller screens */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .subject-container {
+                flex: 0 1 calc(100% - 20px); /* Each takes full width on very small screens */
+                padding: 0.5rem; /* Reduce padding on smaller screens */
+            }
+            h2 {
+                font-size: 1.8rem; /* Adjust heading size for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Choose Your Subject</h2>
+    <div class="subjects-row">
+        <div class="subject-container">
+            <a href="file:///C:/Users/Speccon/Documents/SpecCon%20Academic/Profile%20of%20a%20term.html">
+                <img src="English Home Language.png" alt="English Home Language">
+                <h3>English Home Language</h3>
+        </a>
+        </div>
+        <div class="subject-container">
+            <img src="Afrikaans First Additional Language.png" alt="Afrikaans First Additional Language">
+            <h3>Afrikaans First Additional Language</h3>
+        </div>
+        <div class="subject-container">
+            <img src="Mathematics.png" alt="Mathematics">
+            <h3>Mathematics</h3> 
+        </div>
+    </div>
+    <div class="subjects-row">
+        <div class="subject-container">
+            <img src="Natural Science & Technology.png" alt="Natural Science & Technology">
+            <h3>Natural Science & Technology</h3> 
+        </div>
+        <div class="subject-container">
+            <img src="Social Science.png" alt="Social Science">
+            <h3>Social Science</h3>
+        </div>
+        <div class="subject-container">
+            <img src="Life Orientation.png" alt="Life Orientation">
+            <h3>Life Orientation</h3>
+        </div>
+    </div>
+</body>
+</html>
